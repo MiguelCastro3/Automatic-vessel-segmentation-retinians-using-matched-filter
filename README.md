@@ -1,4 +1,4 @@
-# Automatic-vessel-segmentation-retinians
+# Automatic vessel segmentation retinians using matched filter
 **PROJECT:** 
 
 Creation of an algorithm that allows to automatically segment the retinal vessels in images of the fundus. This algorithm was based on the matched filter. OpenCV was used to read and write the image files.
