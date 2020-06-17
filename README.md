@@ -17,7 +17,7 @@ Creation of an algorithm that allows to automatically segment the retinal vessel
 
 **RESULTS:** 
 
-An example of the results obtained. 
+An example of the results obtained:
 ![21_imagem_segmentada - Cópia](https://user-images.githubusercontent.com/66881028/84839586-483e0200-b035-11ea-8922-f8215ce8b44b.png)
 | Image/Metrics  | Sensitivity | Specificity | Accuracy |
 | ------------- | ------------- | ------------- | ------------- |
