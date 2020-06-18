@@ -1,30 +1,24 @@
 # Automatic vessel segmentation retinians using matched filter
 **PROJECT:** 
 
-This project aims to develop an algorithm that allows to automatically segment the retinal vessels in fundus images using line operators. In this project, the effect that the variables, threshold and line length have on the automatic segmentation obtained was also tested.
+Creation of an algorithm that allows to automatically segment the retinal vessels in images of the fundus. This algorithm was based on the matched filter. OpenCV was used to read and write the image files.
 
 **STEPS:** 
 
-* Code implementation for line operators;
-* Conclusion of the remaining image processing methods.
+* Implementation of the matched filter algorithm;
+* Restructuring the algorithm to classes.
 
 **FILES:** 
-* [Ricci_Perfetti@2007.pdf](https://github.com/MiguelCastro3/Blood-vessel-segmentation-using-line-operators/blob/master/Ricci_Perfetti%402007.pdf) - (Digital Retinal Images for Vessel Extraction) - scientific article on which the project was based.
-* [DRIVE](https://github.com/MiguelCastro3/Blood-vessel-segmentation-using-line-operators/tree/master/DRIVE) - (Digital Retinal Images for Vessel Extraction) - contains image data sets (test and training) with images for segmentation, respective mask and respective manual segmentation.
-* [Imagens segmentadas](https://github.com/MiguelCastro3/Blood-vessel-segmentation-using-line-operators/tree/master/Imagens%20segmentadas) - contains the images resulting from the algorithm developed for the automatic segmentation of retinal vessels, for different thresholds and different line lengths.
-* [segmentacao.py](https://github.com/MiguelCastro3/Blood-vessel-segmentation-using-line-operators/blob/master/segmentacao.py) - code with all the methods applied in the different images to select only the retinal vessels, through the line operators.
+* [DRIVE](https://github.com/MiguelCastro3/Automatic-vessel-segmentation-retinians/tree/master/DRIVE) - (Digital Retinal Images for Vessel Extraction) - contains image data sets (test and training) with images for segmentation, respective mask and respective manual segmentation.
+* [Segmentation results](https://github.com/MiguelCastro3/Automatic-vessel-segmentation-retinians/tree/master/Segmentation%20results) - contains the images resulting from the algorithm developed for automatic segmentation of retinal vessels.
+* [Entrada_Saida_Imagens.h](https://github.com/MiguelCastro3/Automatic-vessel-segmentation-retinians/blob/master/Entrada_Saida_Imagens.h) and [Entrada_Saida_Imagens.cpp](https://github.com/MiguelCastro3/Automatic-vessel-segmentation-retinians/blob/master/Entrada_Saida_Imagens.cpp) - class Entrada_Saida_Images with the code referring to the reading and writing of the images used in the algorithm.
+* [Matched_Filter.h](https://github.com/MiguelCastro3/Automatic-vessel-segmentation-retinians/blob/master/Matched_Filter.h) and [Matched_Filter.cpp](https://github.com/MiguelCastro3/Automatic-vessel-segmentation-retinians/blob/master/Matched_Filter.cpp) - Matched_Filter class with the code for most of the algorithm. This is where all image processing and automatic segmentation take place.
+* [Metricas.h](https://github.com/MiguelCastro3/Automatic-vessel-segmentation-retinians/blob/master/Metricas.h) and [Metricas.cpp](https://github.com/MiguelCastro3/Automatic-vessel-segmentation-retinians/blob/master/Metricas.cpp) - Metricas class compares the image resulting from the algorithm with DRIVE segmentation by calculating some metrics, sensitivity, specificity and accuracy, for future discussion of algorithm quality.
 
 **RESULTS:** 
 
 An example of the results obtained:
-![Sem Título](https://user-images.githubusercontent.com/66881028/84937268-60fcf500-b0d3-11ea-87ee-9b9821fea0f4.png)
+![21_imagem_segmentada - Cópia](https://user-images.githubusercontent.com/66881028/84839586-483e0200-b035-11ea-8922-f8215ce8b44b.png)
 | Image/Metrics  | Sensitivity | Specificity | Accuracy |
 | ------------- | ------------- | ------------- | ------------- |
-| 40_training  | 64.45877847208224 | 98.62850631314416	| 94.79986809950357 |  
-
-
-Effects obtained with the variation of the threshold and the line length:
-
-![threshold](https://user-images.githubusercontent.com/66881028/84935216-4b3a0080-b0d0-11ea-9913-875057e28af9.png)
-
-![comprimento de linha](https://user-images.githubusercontent.com/66881028/84935213-4aa16a00-b0d0-11ea-8271-99ad3d4d77bf.png)
+| 21_training  | 51.3892  | 99.3362 | 94.0216 |
